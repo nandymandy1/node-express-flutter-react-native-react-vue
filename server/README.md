@@ -1,7 +1,7 @@
 ## NODE EXPRESS MONGO-DB User Authentication And CRUD RESTFUL BACKNED
 
 <img src="https://yt3.ggpht.com/a/AATXAJwCeZV8AMcRIyLOrJfWnJVhof9d5IUwUjRUKt6smuo=s900-c-k-c0x00ffffff-no-rj" alt="Kitten"
-	title="A cute kitten" width="150" height="100" />
+	title="A cute kitten" width="200" height="200" />
 
 This backend is build using mongoDB Node Express for the CRUD Operations. Packages used in this backend are as follows
 
