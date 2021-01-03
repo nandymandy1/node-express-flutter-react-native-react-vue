@@ -242,6 +242,30 @@ $ npm start (For Production)
     }
 ```
 
+- To get a single post by ID
+`@URL: /api/posts?id=<Object ID>`
+`@TYPE: GET`
+`Content-Type: application/json`
+```javascript
+    @RESPONSE JSON DATA:{
+        _id: <Object ID>,
+        title: <Stirng>,
+        imagePath:{
+            _id: <Object ID>, 
+            urlPath: <URL String>
+        },
+        author:{
+            _id: <Object ID>,
+            username: <String>, 
+            name: <String>
+        },
+        slug: <Slug String>,
+        excerpt: <String>,
+        createdAt: <Timestamps>,
+        updatedAt: <Timestamps>,
+    }
+```
+
 License
 ----
 
