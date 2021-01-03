@@ -1,4 +1,4 @@
-#### NODE EXPRESS MONGO-DB User Authentication Aand CRUD RESTFUL BACKNED
+## NODE EXPRESS MONGO-DB User Authentication And CRUD RESTFUL BACKNED
 
 This backend is build using mongoDB Node Express for the CRUD Operations. Packages used in this backend are as follows
 
@@ -31,7 +31,7 @@ $ npm start (For Production)
 
 #### API's
 
-###### User Authentication API
+##### User Authentication API
 
 - To Register a new user
 `@URL: /api/users/register`
@@ -77,7 +77,7 @@ $ npm start (For Production)
     }
 ```
 
-##### Image Uploader API
+#### Image Uploader API
 
 - To Upload an Image
 `@URL: /api/images/upload-single`
@@ -149,7 +149,7 @@ $ npm start (For Production)
     }
 ```
 
-##### Blog Post API
+#### Blog Post API
 
 - To create a new Post
 `@URL: /api/posts`
