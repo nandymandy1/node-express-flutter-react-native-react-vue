@@ -259,6 +259,7 @@ $ npm start (For Production)
             username: <String>, 
             name: <String>
         },
+        content:<String>,
         slug: <Slug String>,
         excerpt: <String>,
         createdAt: <Timestamps>,

@@ -103,7 +103,7 @@ router.get('/', async (req, res) => {
             if (!mongoose.Types.ObjectId.isValid(id)) {
                 throw new RES_EXCEPTION("Invalid post id", 400);
             }
-            data = await Post.findById(id);
+            data = await Post.findById(id).populate('author', 'username name').populate('imagePath', 'urlPath');
             if (!data) {
                 throw new RES_EXCEPTION('Post not found.', 404);
             }
