@@ -248,6 +248,63 @@ $ npm start (For Production)
     }
 ```
 
+- To Get All posts with paginations by the authenticated user
+`@URL: /api/posts/my-posts`
+`@TYPE: GET`
+`Content-Type: application/json`
+`Authorization: <token>`
+```javascript
+    @RESPONSE JSON DATA {
+        postsList:[
+            {
+                _id: <Object ID>,
+                title: <Stirng>,
+                imagePath:{
+                    _id: <Object ID>, 
+                    urlPath: <URL String>
+                },
+                author:{
+                    _id: <Object ID>,
+                    username: <String>, 
+                    name: <String>
+                },
+                slug: <Slug String>,
+                excerpt: <String>,
+                createdAt: <Timestamps>,
+                updatedAt: <Timestamps>,
+            },
+            {
+                _id: <Object ID>,
+                title: <Stirng>,
+                imagePath:{
+                    _id: <Object ID>, 
+                    urlPath: <URL String>
+                },
+                author:{
+                    _id: <Object ID>,
+                    username: <String>, 
+                    name: <String>
+                },
+                slug: <Slug String>,
+                excerpt: <String>,
+                createdAt: <Timestamps>,
+                updatedAt: <Timestamps>,
+            }
+        ],
+        paginator:{
+            postCount: 3,
+            perPage: 10,
+            pageCount: 1,
+            currentPage: 1,
+            slNo: 1,
+            hasPrevPage: false,
+            hasNextPage: false,
+            prev: null,
+            next: null
+        }
+    }
+```
+
 - To get a single post by ID
 `@URL: /api/posts?id=<Object ID>`
 `@TYPE: GET`
