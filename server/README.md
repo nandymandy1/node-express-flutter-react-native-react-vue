@@ -52,7 +52,7 @@ $ npm start (For Production)
 ```
 
 - To Authenticate an user
-`@URL: /api/users/register`
+`@URL: /api/users/authenticate`
 `@TYPE: POST`
 `Content-Type: application/json`
 ```javascript
@@ -148,6 +148,46 @@ $ npm start (For Production)
         message: "Images deleted successfully."
     }
 ```
+
+##### Blog Post API
+
+- To create a new Post
+`@URL: /api/posts`
+`@TYPE: POST`
+`Content-Type: application/json`
+`Authorization: <token>`
+```javascript
+    @REQUEST JOSN DATA:{ 
+            title:<String>,
+            imagePath:<Object_ID>,
+            content:<String>
+    },
+    @RESPONSE JSON DATA:{
+        status: Boolean,
+        post:{
+            _id:<ObjectID>,
+            title:<String>,
+            imagePath: {
+                urlPath: <String>
+                _id: <Object ID>
+            },
+            content:<String>,
+            author:{
+                username: <String>
+                _id: <Object ID>
+            },
+            slug: <String>,
+            excerpt:<String>,
+            createdAt:<Timestamps>,
+            updatedAt:<Timestamps>,
+            __v:0
+        },
+        message:"Post created successfully."
+    }
+```
+
+- To Get All posts with paginations
+
 
 License
 ----
