@@ -31,7 +31,36 @@ $ npm start (For Production)
 
 #### API's
 
+- To Register a new user
+`@URL: /api/users/register`
+`Content-Type: application/json`
+```javascript
+    @REQUEST JOSN DATA:{ 
+        username: <String>, 
+        password: <String>, 
+        email: <Stirng>,
+        name: <String>,
+        source: <String>
+    }
+    @RESPONSE JSON DATA:{
+        message: "Hurray! your account is created successfully. You are now ready to go.",
+        token: "Bearer <token>"
+    }
+```
 
+- To Authenticate an user
+`@URL: /api/users/authenticate`
+`Content-Type: application/json`
+```javascript
+    @REQUEST JOSN DATA:{ 
+        username: <String>, 
+        password: <String>
+    }
+    @RESPONSE JSON DATA:{
+        message: "Hurray! You are now logged in.",
+        token: "Bearer <token>"
+    }
+```
 
 License
 ----

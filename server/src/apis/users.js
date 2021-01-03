@@ -77,7 +77,7 @@ router.post('/authenticate', LoginUserValidator, async (req, res) => {
             .status(202)
             .json({
                 token: `Bearer ${token}`,
-                message: 'Hurray! You are now logged in .'
+                message: 'Hurray! You are now logged in.'
             });
     } catch (err) {
         return res
