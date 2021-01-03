@@ -159,8 +159,9 @@ $ npm start (For Production)
 ```javascript
     @REQUEST JOSN DATA:{ 
             title:<String>,
+            content:<String>,
             imagePath:<Object_ID>,
-            content:<String>
+            excerpt: <String> (Optional)
     },
     @RESPONSE JSON DATA:{
         status: Boolean,
@@ -264,6 +265,103 @@ $ npm start (For Production)
         excerpt: <String>,
         createdAt: <Timestamps>,
         updatedAt: <Timestamps>,
+    }
+```
+
+- To get a single post by Slug
+`@URL: /api/posts/:slug`
+`@TYPE: GET`
+`Content-Type: application/json`
+```javascript
+    @RESPONSE JSON DATA:{
+        _id: <Object ID>,
+        title: <Stirng>,
+        imagePath:{
+            _id: <Object ID>, 
+            urlPath: <URL String>
+        },
+        author:{
+            _id: <Object ID>,
+            username: <String>, 
+            name: <String>
+        },
+        content:<String>,
+        slug: <Slug String>,
+        excerpt: <String>,
+        createdAt: <Timestamps>,
+        updatedAt: <Timestamps>,
+    }
+```
+
+- To update a post by id
+`@URL: /api/posts/:id`
+`@TYPE: PUT`
+`Content-Type: application/json`
+`Authorization: <token>`
+```javascript
+    @REQUEST JSON DATA:{
+        title: <String>,
+        content: <String>,
+        imagePath:<Object_ID>,
+        excerpt: <String> (Optional)
+    }
+    @RESPONSE JSON DATA:{
+       post: {
+            _id: <Object ID>,
+            title: <Stirng>,
+            imagePath:{
+                _id: <Object ID>, 
+                urlPath: <URL String>
+            },
+            author:{
+                _id: <Object ID>,
+                username: <String>, 
+                name: <String>
+            },
+            content:<String>,
+            slug: <Slug String>,
+            excerpt: <String>,
+            createdAt: <Timestamps>,
+            updatedAt: <Timestamps>,
+       },
+       message: "Post is updated successfully.",
+       status: <Boolean>
+    }
+```
+
+- To update a post by id
+`@URL: /api/posts/:id`
+`@TYPE: DELETE`
+`Content-Type: application/json`
+`Authorization: <token>`
+```javascript
+    @REQUEST JSON DATA:{
+        title: <String>,
+        content: <String>,
+        imagePath:<Object_ID>,
+        excerpt: <String> (Optional)
+    }
+    @RESPONSE JSON DATA:{
+       post: {
+            _id: <Object ID>,
+            title: <Stirng>,
+            imagePath:{
+                _id: <Object ID>, 
+                urlPath: <URL String>
+            },
+            author:{
+                _id: <Object ID>,
+                username: <String>, 
+                name: <String>
+            },
+            content:<String>,
+            slug: <Slug String>,
+            excerpt: <String>,
+            createdAt: <Timestamps>,
+            updatedAt: <Timestamps>,
+       },
+       message: "Post is updated successfully.",
+       status: <Boolean>
     }
 ```
 
