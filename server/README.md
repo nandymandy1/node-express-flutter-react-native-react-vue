@@ -44,7 +44,7 @@ $ npm start (For Production)
 `@TYPE: POST`
 `Content-Type: application/json`
 ```javascript
-    @REQUEST JOSN DATA:{ 
+    @REQUEST JSON DATA:{ 
         username: <String>, 
         password: <String>, 
         email: <Stirng>,
@@ -62,7 +62,7 @@ $ npm start (For Production)
 `@TYPE: POST`
 `Content-Type: application/json`
 ```javascript
-    @REQUEST JOSN DATA:{ 
+    @REQUEST JSON DATA:{ 
         username: <String>, 
         password: <String>
     },
@@ -168,7 +168,7 @@ $ npm start (For Production)
 `Content-Type: application/json`
 `Authorization: <token>`
 ```javascript
-    @REQUEST JOSN DATA:{ 
+    @REQUEST JSON DATA:{ 
             title:<String>,
             content:<String>,
             imagePath:<Object_ID>,
