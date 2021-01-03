@@ -194,38 +194,38 @@ $ npm start (For Production)
     @RESPONSE JSON DATA {
         postsList:[
             {
-                _id: "5ff1d5b2b77bf50bab5a9245",
-                title: "Post One Updated",
+                _id: <Object ID>,
+                title: <Stirng>,
                 imagePath:{
-                _id: "5ff1b8387f61380496811337", 
-                urlPath: "http://localhost:5000/postImages/img-1609676856870.png"…
+                    _id: <Object ID>, 
+                    urlPath: <URL String>
                 },
                 author:{
-                    _id: "5ff17cd97f61380496811332", 
-                    username: "nandymandy1", 
-                    name: "Narendra Maurya"…
+                    _id: <Object ID>,
+                    username: <String>, 
+                    name: <String>
                 },
-                slug: "post-one",
-                excerpt: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-                createdAt: "2021-01-03T14:33:22.983Z",
-                updatedAt: "2021-01-03T14:45:06.387Z"
+                slug: <Slug String>,
+                excerpt: <String>,
+                createdAt: <Timestamps>,
+                updatedAt: <Timestamps>,
             },
             {
-                _id: "5ff1d5b9b77bf50bab5a9246",
-                title: "Post Two",
+                _id: <Object ID>,
+                title: <Stirng>,
                 imagePath:{
-                    _id: "5ff1b8387f61380496811337", 
-                  urlPath:"http://localhost:5000/postImages/img-1609676856870.png"
+                    _id: <Object ID>, 
+                    urlPath: <URL String>
                 },
                 author:{
-                    _id: "5ff17cd97f61380496811332", 
-                    username: "nandymandy1", 
-                    name: "Narendra Maurya"…
+                    _id: <Object ID>,
+                    username: <String>, 
+                    name: <String>
                 },
-                slug: "post-two",
-                excerpt: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-                createdAt: "2021-01-03T14:33:29.574Z",
-                updatedAt: "2021-01-03T14:33:29.574Z"
+                slug: <Slug String>,
+                excerpt: <String>,
+                createdAt: <Timestamps>,
+                updatedAt: <Timestamps>,
             }
         ],
         paginator:{
