@@ -23,7 +23,7 @@ Like, Comment, Share and Subscribe.
 
 ##### Set Environment Variables in the .dotenv file
 - PORT (Port on which applciation will run eg. 5000)
-- DB (MongoDB localhost URI or Mongodb cluster URI to connect with dat)
+- DB (MongoDB localhost URI or Mongodb cluster URI to connect with database)
 - BASEURL (Base Url of the server or Domain)
 - SECRET (Application Secret to hash the password)
 
@@ -151,7 +151,7 @@ $ npm start (For Production)
 ```javascript
     @REQUEST JSON DATA:{
         image_ids:[
-            <Object ID>
+            ...,<Object ID>
         ]
     },
     @RESPONSE JSON DATA:{
@@ -287,9 +287,9 @@ $ npm start (For Production)
                     urlPath: <URL String>
                 },
                 author:{
+                    name: <String>,
                     _id: <Object ID>,
                     username: <String>, 
-                    name: <String>
                 },
                 slug: <Slug String>,
                 excerpt: <String>,
@@ -324,13 +324,13 @@ $ npm start (For Production)
             urlPath: <URL String>
         },
         author:{
+            name: <String>,
             _id: <Object ID>,
             username: <String>, 
-            name: <String>
         },
         content:<String>,
-        slug: <Slug String>,
         excerpt: <String>,
+        slug: <Slug String>,
         createdAt: <Timestamps>,
         updatedAt: <Timestamps>,
     }
@@ -345,17 +345,17 @@ $ npm start (For Production)
         _id: <Object ID>,
         title: <Stirng>,
         imagePath:{
-            _id: <Object ID>, 
+            _id: <Object ID>,
             urlPath: <URL String>
         },
         author:{
+            name: <String>,
             _id: <Object ID>,
-            username: <String>, 
-            name: <String>
+            username: <String>,
         },
         content:<String>,
-        slug: <Slug String>,
         excerpt: <String>,
+        slug: <Slug String>,
         createdAt: <Timestamps>,
         updatedAt: <Timestamps>,
     }
@@ -382,13 +382,13 @@ $ npm start (For Production)
                 urlPath: <URL String>
             },
             author:{
+                name: <String>,
                 _id: <Object ID>,
-                username: <String>, 
-                name: <String>
+                username: <String>,
             },
             content:<String>,
-            slug: <Slug String>,
             excerpt: <String>,
+            slug: <Slug String>,
             createdAt: <Timestamps>,
             updatedAt: <Timestamps>,
        },
@@ -418,13 +418,13 @@ $ npm start (For Production)
                 urlPath: <URL String>
             },
             author:{
+                name: <String>,
                 _id: <Object ID>,
-                username: <String>, 
-                name: <String>
+                username: <String>,
             },
             content:<String>,
-            slug: <Slug String>,
             excerpt: <String>,
+            slug: <Slug String>,
             createdAt: <Timestamps>,
             updatedAt: <Timestamps>,
        },
