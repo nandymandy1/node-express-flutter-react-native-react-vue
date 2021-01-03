@@ -8,16 +8,16 @@ For more content follow my Youtube Channel here.
 #### [Codebook Inc.](https://www.youtube.com/channel/UC7fpWskUFi90sANs9QXRVsg)
 Like, Comment, Share and Subscribe.
 
-  - Mongoose
-  - Express.js
-  - Passport
-  - Jsonwebtoken
-  - Bcrypt.js
-  - Mongoose Paginate v2
-  - Multer
-  - Passport-jwt
   - ESM
   - Lodash
+  - Multer
+  - Mongoose
+  - Passport
+  - Bcrypt.js
+  - Express.js
+  - Jsonwebtoken
+  - Passport-jwt
+  - Mongoose Paginate v2
 
 #### PACKAGE ENVIRONMENT SETUP
 
