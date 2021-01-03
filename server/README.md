@@ -78,8 +78,8 @@ $ npm start (For Production)
 `Authorization: <token>`
 ```javascript
     @RESPONSE JSON DATA:{
-        "token": "Bearer <token>",
-        "message": "Hurray! You are now logged in ."
+        token: "Bearer <token>",
+        message: "Hurray! You are now logged in ."
     }
 ```
 
