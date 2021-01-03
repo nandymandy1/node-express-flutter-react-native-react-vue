@@ -113,20 +113,26 @@ $ npm start (For Production)
 `Authorization: <token>`
 ```javascript
     @RESPONSE JSON DATA:{
-        "imagesList":[
-            {"_id":"5ff1b7c07f61380496811336","urlPath":"http://localhost:5000/postImages/img-1609676736697.png"},
-            {"_id":"5ff1b7b77f61380496811333","urlPath":"http://localhost:5000/postImages/img-1609676727088.png"}
+        imagesList:[
+            {
+                _id: <Object ID>,
+                urlPath: <URL String>
+            },
+            {
+                _id: <Object ID>,
+                urlPath: <URL String>
+            },
         ],
-        "paginator":{
-            "imageCount":2,
-            "perPage":10,
-            "pageCount":1,
-            "currentPage":1,
-            "slNo":1,
-            "hasPrevPage":false,
-            "hasNextPage":false,
-            "prev":null,
-            "next":null
+        paginator:{
+            imageCount:2,
+            perPage:10,
+            pageCount:1,
+            currentPage:1,
+            slNo:1,
+            hasPrevPage:false,
+            hasNextPage:false,
+            prev:null,
+            next:null
         }
     }
 ```
@@ -138,9 +144,8 @@ $ npm start (For Production)
 `Authorization: <token>`
 ```javascript
     @REQUEST JSON DATA:{
-        "image_ids":[
-            "5ff1b7c07f61380496811336",
-            "5ff1b7bf7f61380496811335"
+        image_ids:[
+            <Object ID>
         ]
     },
     @RESPONSE JSON DATA:{
