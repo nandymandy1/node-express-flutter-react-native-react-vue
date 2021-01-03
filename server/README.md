@@ -194,50 +194,50 @@ $ npm start (For Production)
     @RESPONSE JSON DATA {
         postsList:[
             {
-                "_id": "5ff1d5b2b77bf50bab5a9245",
-                "title": "Post One Updated",
-                "imagePath":{
-                "_id": "5ff1b8387f61380496811337", 
-                "urlPath": "http://localhost:5000/postImages/img-1609676856870.png"…
+                _id: "5ff1d5b2b77bf50bab5a9245",
+                title: "Post One Updated",
+                imagePath:{
+                _id: "5ff1b8387f61380496811337", 
+                urlPath: "http://localhost:5000/postImages/img-1609676856870.png"…
                 },
-                "author":{
-                    "_id": "5ff17cd97f61380496811332", 
-                    "username": "nandymandy1", 
-                    "name": "Narendra Maurya"…
+                author:{
+                    _id: "5ff17cd97f61380496811332", 
+                    username: "nandymandy1", 
+                    name: "Narendra Maurya"…
                 },
-                "slug": "post-one",
-                "excerpt": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-                "createdAt": "2021-01-03T14:33:22.983Z",
-                "updatedAt": "2021-01-03T14:45:06.387Z"
+                slug: "post-one",
+                excerpt: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+                createdAt: "2021-01-03T14:33:22.983Z",
+                updatedAt: "2021-01-03T14:45:06.387Z"
             },
             {
-                "_id": "5ff1d5b9b77bf50bab5a9246",
-                "title": "Post Two",
-                "imagePath":{
-                    "_id": "5ff1b8387f61380496811337", 
-                  "urlPath":"http://localhost:5000/postImages/img-1609676856870.png"
+                _id: "5ff1d5b9b77bf50bab5a9246",
+                title: "Post Two",
+                imagePath:{
+                    _id: "5ff1b8387f61380496811337", 
+                  urlPath:"http://localhost:5000/postImages/img-1609676856870.png"
                 },
-                "author":{
-                    "_id": "5ff17cd97f61380496811332", 
-                    "username": "nandymandy1", 
-                    "name": "Narendra Maurya"…
+                author:{
+                    _id: "5ff17cd97f61380496811332", 
+                    username: "nandymandy1", 
+                    name: "Narendra Maurya"…
                 },
-                "slug": "post-two",
-                "excerpt": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-                "createdAt": "2021-01-03T14:33:29.574Z",
-                "updatedAt": "2021-01-03T14:33:29.574Z"
+                slug: "post-two",
+                excerpt: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+                createdAt: "2021-01-03T14:33:29.574Z",
+                updatedAt: "2021-01-03T14:33:29.574Z"
             }
         ],
-        "paginator":{
-            "postCount": 3,
-            "perPage": 10,
-            "pageCount": 1,
-            "currentPage": 1,
-            "slNo": 1,
-            "hasPrevPage": false,
-            "hasNextPage": false,
-            "prev": null,
-            "next": null
+        paginator:{
+            postCount: 3,
+            perPage: 10,
+            pageCount: 1,
+            currentPage: 1,
+            slNo: 1,
+            hasPrevPage: false,
+            hasNextPage: false,
+            prev: null,
+            next: null
         }
     }
 ```
