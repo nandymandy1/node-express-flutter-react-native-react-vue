@@ -1,5 +1,7 @@
 ## NODE EXPRESS MONGO-DB User Authentication And CRUD RESTFUL BACKNED
 
+![Image of Codebook Inc](https://yt3.ggpht.com/a/AATXAJwCeZV8AMcRIyLOrJfWnJVhof9d5IUwUjRUKt6smuo=s900-c-k-c0x00ffffff-no-rj)
+
 This backend is build using mongoDB Node Express for the CRUD Operations. Packages used in this backend are as follows
 
   - Mongoose
