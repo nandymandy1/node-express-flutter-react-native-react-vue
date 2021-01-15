@@ -2,6 +2,7 @@ import './models/transaction.dart';
 import 'package:flutter/material.dart';
 import './widgets/transaction_form.dart';
 import './widgets/transaction_list.dart';
+import './widgets/chart.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,6 +12,7 @@ class MyApp extends StatelessWidget {
         title: 'Personal Exprenses',
         theme: ThemeData(
           fontFamily: 'QuickSand',
+          errorColor: Colors.red,
           accentColor: Colors.amber,
           primarySwatch: Colors.purple,
           textTheme: ThemeData.light().textTheme.copyWith(
@@ -19,6 +21,7 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   fontSize: 18,
                 ),
+                button: TextStyle(color: Colors.white),
               ),
           appBarTheme: AppBarTheme(
             textTheme: ThemeData.light().textTheme.copyWith(
@@ -43,31 +46,45 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   final List<Transaction> _userTransactions = [];
 
-  void _addNewTransaction(String title, double amount) {
+  List<Transaction> get _recentTransactions {
+    return _userTransactions.where((txn) {
+      return txn.date.isAfter(
+        DateTime.now().subtract(
+          Duration(days: 7),
+        ),
+      );
+    }).toList();
+  }
+
+  void _addNewTransaction(String title, double amount, DateTime chosenDate) {
     final newTxn = Transaction(
       title: title,
       amount: amount,
-      date: DateTime.now(),
+      date: chosenDate,
       id: DateTime.now().toString(),
     );
 
     setState(() => _userTransactions.add(newTxn));
   }
 
-  void _startAddNewTransaction(BuildContext ctx) {
-    showModalBottomSheet(
-      context: ctx,
-      builder: (_) {
-        return GestureDetector(
-          onTap: () {},
-          child: TransactionFrom(
-            addUserTransaction: _addNewTransaction,
-          ),
-          behavior: HitTestBehavior.opaque,
-        );
-      },
-    );
+  void _deleteTransaction(String id) {
+    setState(() {
+      _userTransactions.removeWhere((txn) => txn.id == id);
+    });
   }
+
+  void _startAddNewTransaction(BuildContext ctx) => showModalBottomSheet(
+        context: ctx,
+        builder: (_) {
+          return GestureDetector(
+            onTap: () {},
+            child: TransactionFrom(
+              addUserTransaction: _addNewTransaction,
+            ),
+            behavior: HitTestBehavior.opaque,
+          );
+        },
+      );
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -90,20 +107,11 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Container(
-                width: double.infinity,
-                child: Card(
-                  color: Colors.blue,
-                  elevation: 5,
-                  child: Text(
-                    'Chart Goes here...',
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
+              Chart(
+                recentTxns: _recentTransactions,
               ),
               TransactionList(
+                deleteTxn: _deleteTransaction,
                 transactions: _userTransactions,
               ),
             ],

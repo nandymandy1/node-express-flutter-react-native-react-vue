@@ -1,0 +1,24 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.brand-logo {
+  height: 45px;
+}
+
+#app {
+  height: 100vh !important;
+}
+
+.navbar {
+  border-bottom: 5px solid #41b882 !important;
+}
+
+.card,
+.btn,
+.form-control {
+  border-radius: 2px !important;
+}
+
+.card {
+  border: none;
+  box-shadow: 5px 5px 12px 0px rgba(0, 0, 0, 0.08);
+}

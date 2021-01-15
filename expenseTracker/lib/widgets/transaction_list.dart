@@ -5,14 +5,16 @@ import 'package:intl/intl.dart';
 
 class TransactionList extends StatelessWidget {
   final List<Transaction> transactions;
+  final Function deleteTxn;
 
   TransactionList({
+    this.deleteTxn,
     this.transactions,
   });
 
   @override
   Widget build(BuildContext context) => Container(
-        height: 400,
+        height: 450,
         child: transactions.isEmpty
             ? Column(
                 children: <Widget>[
@@ -35,55 +37,37 @@ class TransactionList extends StatelessWidget {
             : ListView.builder(
                 itemBuilder: (ctx, index) {
                   return Card(
-                    child: Row(
-                      children: <Widget>[
-                        Container(
-                          margin: EdgeInsets.symmetric(
-                            vertical: 10,
-                            horizontal: 15,
-                          ),
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              width: 2,
-                              color: Theme.of(context).primaryColor,
-                            ),
-                          ),
-                          padding: EdgeInsets.all(10),
-                          child: Text(
-                            '\$${transactions[index].amount.toStringAsFixed(2)}',
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              color: Theme.of(context).primaryColor,
-                            ),
+                    elevation: 5,
+                    margin: EdgeInsets.symmetric(
+                      vertical: 8,
+                      horizontal: 5,
+                    ),
+                    child: ListTile(
+                      leading: CircleAvatar(
+                        radius: 30,
+                        child: Padding(
+                          padding: EdgeInsets.all(6),
+                          child: FittedBox(
+                            child: Text('\$${transactions[index].amount}'),
                           ),
                         ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              transactions[index].title,
-                              style: Theme.of(context).textTheme.title,
-                            ),
-                            Text(
-                              DateFormat.yMMMd().format(
-                                transactions[index].date,
-                              ),
-                              style: TextStyle(
-                                fontSize: 10,
-                                color: Colors.grey,
-                              ),
-                            ),
-                          ],
-                        )
-                      ],
+                      ),
+                      title: Text(
+                        transactions[index].title,
+                        style: Theme.of(context).textTheme.title,
+                      ),
+                      subtitle: Text(
+                        DateFormat.yMMMd().format(transactions[index].date),
+                      ),
+                      trailing: IconButton(
+                        onPressed: () => deleteTxn(transactions[index].id),
+                        icon: Icon(Icons.delete),
+                        color: Theme.of(context).errorColor,
+                      ),
                     ),
                   );
                 },
                 itemCount: transactions.length,
-                // children: transactions.map((txn) {
-                //   return
-                // }).toList(),
               ),
       );
 }
